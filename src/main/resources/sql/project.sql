@@ -175,6 +175,7 @@ offset 1 * 10 row
  
  select * from country where code='XYZ';
  delete from country where code='XYZ';
+ commit;
  
  
  
