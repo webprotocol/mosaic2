@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Dept {
 
-	private int deptno;
+	private Integer deptno;
 	private String dname;
 	private String loc;
 	
@@ -39,11 +39,11 @@ public class Dept {
 		return str;
 	}
 
-	public int getDeptno() {
+	public Integer getDeptno() {
 		return deptno;
 	}
 
-	public void setDeptno(int deptno) {
+	public void setDeptno(Integer deptno) {
 		this.deptno = deptno;
 	}
 
