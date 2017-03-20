@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.LongTestMapper">
+
+<resultMap type="com.example.domain.LongTest" id="xxx">
+	<result property="id" column="id"/>
+	<result property="content" column="content"/>
+</resultMap>
+
+<select id="selectAll" resultMap="xxx" >
+	select *
+	  from longtest
+</select>
+
+</mapper>

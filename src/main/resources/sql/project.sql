@@ -178,6 +178,19 @@ offset 1 * 10 row
  commit;
  
  
+ create table longtest
+ (
+ 	id number,
+	content long
+ );
+ 
+ insert into longtest values (1, 'xxxx');
+ select * from longtest;
+ 
+ 
+ 
+ 
+ 
  
   
   	
