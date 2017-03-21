@@ -49,7 +49,7 @@ public class CityRegisterServiceTests {
 		BindingResult errors = new BeanPropertyBindingResult(cityForm, "cityForm");
 
 		cityForm.setName("xxx");
-		cityForm.setCountryCode("KOR");
+		cityForm.setCountryCode("USA");
 		
 		validator.validate(cityForm, errors);
 		if (errors.hasErrors()) {

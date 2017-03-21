@@ -99,7 +99,8 @@ public class CityMapperTests {
 	public void test04_insert() {
 		City city = new City();
 		city.setName("xxx");
-		city.setCountryCode("XYZ");
+//		city.setCountryCode("XYZ");
+		city.setCountryCode("KOR");
 		
 		Country country = countryMapper.selectByCode(city.getCountryCode());
 		
