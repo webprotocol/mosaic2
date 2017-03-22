@@ -187,6 +187,25 @@ offset 1 * 10 row
  insert into longtest values (1, 'xxxx');
  select * from longtest;
  
+ select * from city where country_code='KOR';
+ 
+ select * from city where id > 4100;
+ 
+ 
+ update city
+    set name 		= 'xxx',
+		country_code= 'KOR',
+		district	= 'yyy',
+		population	= 99999
+  where id = 2331;	
+  
+ update city
+    set name 		= #{name},
+		country_code= #{country_code},
+		district	= #{district},
+		population	= #{population}
+  where id = #{id}		
+ 
  
  
  

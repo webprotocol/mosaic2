@@ -130,11 +130,13 @@
 </insert>
 
 <update id="updateById">
-
+	update city
+	   set name 		= #{name},
+		country_code	= #{countryCode},
+		district		= #{district},
+		population		= #{population}
+	 where id = #{id}
 </update>
-
-
-
 
 
 </mapper>
