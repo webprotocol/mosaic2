@@ -199,15 +199,54 @@ offset 1 * 10 row
 		population	= 99999
   where id = 2331;	
   
- update city
-    set name 		= #{name},
-		country_code= #{country_code},
-		district	= #{district},
-		population	= #{population}
-  where id = #{id}		
+--  update city
+-- 	set name 		= #{name},
+-- 		country_code= #{country_code},
+-- 		district	= #{district},
+-- 		population	= #{population}
+--   where id = #{id}		
  
+create sequence board_bno_seq;
+drop sequence board_bno_seq;
+drop table board; 
+
+CREATE TABLE board
+(
+   bno        number,
+   title      varchar2(200 char) NOT NULL,
+   content    varchar2(4000 char),
+   writer     varchar2(50 char) NOT NULL,
+   regdate    date,
+   replcnt	  number,
+   PRIMARY KEY(bno)
+);
+
+select * from board;
  
+insert into board
+(
+	bno,
+	title,
+	content,
+	writer,
+	regdate,
+	replcnt
+)
+values
+(
+	board_bno_seq.nextval,
+	'게시판 태스트입니다',
+	'skjdfksdjf skjf 홍길동 ㅏ넝라ㅓㅇ낳ㄴ얼ㄴㅇㄹㅇㄹㅇㄶ ㄴㅇㅎ  ksjfdjs',
+	'java',
+	sysdate,
+	1
+);
+
+update board
+   set replcnt = replcnt + 1
+ where bno = 3;  
  
+
  
  
  
