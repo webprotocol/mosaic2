@@ -116,11 +116,11 @@ public class CityMapperTests {
 	
 	@Test
 	public void test05_updateById() {
-		City city = new City();
-		city.setId(4121);
+		City city = cityMapper.selectById(2121);
+//		city.setId(4121);
 		city.setName("html2");
-		city.setCountryCode("XYZ");
-//		city.setCountryCode("KOR");
+//		city.setCountryCode("XYZ");
+		city.setCountryCode("KOR");
 		
 		Country country = countryMapper.selectByCode(city.getCountryCode());
 		
