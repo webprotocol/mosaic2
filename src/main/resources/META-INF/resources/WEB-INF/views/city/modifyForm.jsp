@@ -19,7 +19,8 @@
 </head>
 <body>
 <h1>City 수정</h1>
-<form:form action="/city/modify" method="post" modelAttribute="cityForm">
+<form:form action="/city/modify?pageNo=${param.pageNo}" method="post" modelAttribute="cityForm">
+	<form:errors/>
 	<!-- id -->
 	<div>
 		<label for="id">id : </label>
